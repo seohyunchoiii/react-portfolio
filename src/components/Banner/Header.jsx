@@ -14,7 +14,7 @@ const Container = styled.div`
   margin: 0 auto;
   padding: 1.5rem 0;
   @media screen and (max-width:763px) {
-    width: 90%;
+    /* width: 90%; */
   }
 `
 const Logo = styled.div`
@@ -25,8 +25,9 @@ const Logo = styled.div`
   font-size: 1.2rem;
 `
 const Navbar = styled.div`
+  z-index:999;
   @media screen and (max-width: 640px) {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     background-color: ${COLORS.mint};
@@ -79,20 +80,22 @@ const LogoIcon = styled.div`
 `
 const Bars = styled.div`
   display: none;
-  z-index: 999;
   @media screen and (max-width:640px) {
     display: block;
+    right: 50px;
+    position: fixed;
     font-size: 20px;
+    z-index: 999;
     }
 `
 
 
 const Header = () => {
-    const [bar, setBar] = useState(false);
+  const [bar, setBar] = useState(false);
   return (
     <Container>
       <Logo>
-        <LogoIcon><GiCandleFlame/></LogoIcon>
+        <LogoIcon><GiCandleFlame /></LogoIcon>
         Portfolio
       </Logo>
       <Navbar bar={bar}>
@@ -103,7 +106,7 @@ const Header = () => {
         <Link href="#">Portfolio</Link>
       </Navbar>
       <Bars onClick={() => setBar(!bar)}>
-        {bar ? <CgClose/> : <FaBars/>}
+        {bar ? <CgClose /> : <FaBars />}
       </Bars>
     </Container>
   )
