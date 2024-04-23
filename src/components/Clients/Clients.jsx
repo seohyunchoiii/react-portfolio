@@ -11,11 +11,17 @@ const Container = styled.div`
   max-width: 1280px;
   margin: 0 auto;
   padding: 4rem 0;
+
+  @media screen and (max-width: 840px) {
+    width: 90%;
+  }
+
+
   .slick-slider, .slick-list, .slick-track {
     padding: 0;
   }
   .slick-dots {
-    /* background-color: #fff; */
+    /* background-color: #ffffff; */
     text-align: left;
     margin-left: 1rem;
   }
@@ -61,7 +67,12 @@ const Buttons = styled.div`
     cursor: pointer;
     font-size: 1.1rem;
   }
+
+  @media screen and (max-width: 530px) {
+  display: none;
+}
 `
+
 
 var settings = {
   className: "center",
@@ -70,14 +81,14 @@ var settings = {
   infinite: true,
   speed: 500,
   slidesToShow: 3,
-  slidesToScroll: 4,
+  slidesToScroll: 1,
   initialSlide: 0,
   arrows: false,
   responsive: [
     {
       breakpoint: 990,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
         infinite: true,
         dots: true,
@@ -87,14 +98,14 @@ var settings = {
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 1,
-        slidesToScroll: 2,
+        slidesToShow: 2,
+        slidesToScroll: 1,
         initialSlide: 2,
         centerMode: false,
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 530,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,

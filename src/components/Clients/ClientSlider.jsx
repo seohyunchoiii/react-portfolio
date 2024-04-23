@@ -41,10 +41,19 @@ const Details = styled.p``
 const DetailsName = styled.h1`
   font-size: 1.2rem;
   font-weight: 700;
+  @media screen and (max-width: 580px) {
+    font-size: 1rem;
+  }
+  @media screen and (max-width: 538px) {
+    font-size: 0.9rem;
+  }
 `
 const DetailsPosition = styled.p`
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.5);
+  @media screen and (max-width: 538px) {
+    font-size: 0.6rem;
+  }
 `
 
 const ClientSlider = (props) => {

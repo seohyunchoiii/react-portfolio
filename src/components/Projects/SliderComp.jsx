@@ -60,7 +60,7 @@ var settings = {
   infinite: true,
   speed: 500,
   slidesToShow: 3,
-  slidesToScroll: 4,
+  slidesToScroll: 1,
   initialSlide: 0,
   arrows: false,
   responsive: [
@@ -77,7 +77,7 @@ var settings = {
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 2,
         initialSlide: 2,
         centerMode: false,
