@@ -20,6 +20,10 @@ const Container = styled.div`
   @media screen and (max-width: 840px) {
     width: 90%;
   }
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+    gap: 3rem;
+  }
   `
 const Profile = styled.div`
   flex: 1;
@@ -34,6 +38,9 @@ const Paragraph = styled.div`
   width: 60%;
   padding-top: 0.5rem;
   font-size: 0.9rem;
+  @media screen and (max-width: 650px) {
+    width: 100%;
+  }
 `
 const Links = styled.h1`
   font-size: 1.2rem;
@@ -101,6 +108,11 @@ const ArrowUp = styled.div`
   font-size: 1.3rem;
   font-weight: 700;
   margin-top: 2rem;
+  @media screen and (max-width: 650px) {
+    position: absolute;
+    right: 3rem;
+    top: 16rem;
+  }
 `
 const Form = styled.div`
   flex: 1;
