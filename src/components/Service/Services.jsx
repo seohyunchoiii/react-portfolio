@@ -4,6 +4,7 @@ import { CgWebsite } from "react-icons/cg";
 import styled from 'styled-components';
 import Card from './Card';
 import COLORS from '../../common/colors';
+import { Slide } from 'react-awesome-reveal';
 
 const Container = styled.div`
   width: 80%;
@@ -36,26 +37,32 @@ const ColorText = styled.span`
 const Services = () => {
   return (
     <Container id='service'>
-      <Title>
-        <div>My</div>
-        <ColorText>
-          Services
-        </ColorText>
-      </Title>
-      <Sentence>
-        What I Do
-      </Sentence>
+      <Slide direction="down">
+        <Title>
+          <div>My</div>
+          <ColorText>
+            Services
+          </ColorText>
+        </Title>
+        <Sentence>
+          What I Do
+        </Sentence>
+      </Slide>
       <Cards>
-        <Card
-          Icon={MdDesignServices}
-          title={'ui/ux designer'}
-          disc={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown prin`}
-        />
+        <Slide direction="left">
+          <Card
+            Icon={MdDesignServices}
+            title={'ui/ux designer'}
+            disc={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown prin`}
+          />
+        </Slide>
+        <Slide direction="right">
         <Card
           Icon={CgWebsite}
           title={'web designer'}
           disc={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown prin`}
         />
+        </Slide>
       </Cards>
     </Container>
   )

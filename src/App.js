@@ -6,6 +6,7 @@ import Services from './components/Service/Services';
 import Projects from './components/Projects/Projects';
 import Clients from './components/Clients/Clients';
 import Footer from './components/Footer/Footer';
+import { Fade } from 'react-awesome-reveal';
 
 const Container = styled.div``
 const Banner = styled.div`
@@ -19,8 +20,10 @@ function App() {
   return (
     <Container>
       <Banner>
+        <Fade>
         <Header/>
         <ProfComponent/>
+        </Fade>
       </Banner>
       <Services/>
       <LightColor>

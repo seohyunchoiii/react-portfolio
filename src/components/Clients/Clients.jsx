@@ -5,6 +5,7 @@ import COLORS from '../../common/colors'
 import Slider from 'react-slick'
 import ClientSlider from './ClientSlider'
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { Slide } from 'react-awesome-reveal'
 
 const Container = styled.div`
   width: 80%;
@@ -160,10 +161,12 @@ const Clients = () => {
   ))
   return (
     <Container id='client'>
-      <div style={{ color: `${COLORS.mint}`, fontWeight: 700, textTransform: 'uppercase' }}>
-        testimonials
-      </div>
-      <Header>What Clients say?</Header>
+      <Slide direction="left">
+        <div style={{ color: `${COLORS.mint}`, fontWeight: 700, textTransform: 'uppercase' }}>
+          testimonials
+        </div>
+        <Header>What Clients say?</Header>
+      </Slide>
       <Testimonials>
         <Slider ref={arrowRef} {...settings}>
           {clientDisk}

@@ -7,6 +7,7 @@ import { AiFillGithub, AiFillLinkedin, AiOutlineArrowUp } from "react-icons/ai";
 import { BsFacebook, BsSlack } from "react-icons/bs";
 import { FiMail, FiPhoneCall } from "react-icons/fi";
 import COLORS from '../../common/colors';
+import { Slide, Zoom, Fade } from 'react-awesome-reveal';
 
 const Container = styled.div`
   margin-top: 2rem;
@@ -173,12 +174,12 @@ const Footer = () => {
   return (
     <Container>
       <Profile>
-        <Header>Portfolio</Header>
-        <Address>Address
+        <Slide direction="left" delay={1}><Header>Portfolio</Header></Slide>
+        <Slide direction="left"><Address>Address
         <Paragraph>20, Gangneung-daero 194beon-gil, Gangneung-si,
         Gangwon-do, Republic of Korea</Paragraph>
-        </Address>
-        <Links>Contact me directly:</Links>
+        </Address></Slide>
+        <Slide direction="left"><Links>Contact me directly:</Links>
         <Number>
           <span><FiPhoneCall/></span>
           <a href="01049831696">010 4983 1696</a>
@@ -186,34 +187,41 @@ const Footer = () => {
         <Mail>
           <span><HiOutlineMailOpen/></span>
           <a href="mailto:fooodie@naver.com">fooodie@naver.com</a>
-        </Mail>
-        <Profiles>Check my profiles</Profiles>
-        <Icons>
-          <span><a href="#"><AiFillGithub/></a></span>
-          <span><a href="#"><AiFillLinkedin/></a></span>
-          <span><a href="#"><BsFacebook/></a></span>
-          <span><a href="#"><BsSlack/></a></span>
-        </Icons>
+        </Mail></Slide>
+
+        <Slide direction="left"><Profiles>Check my profiles</Profiles></Slide>
+        
+        <Icons><Zoom>
+        <span><a href="#"><AiFillGithub/></a></span>
+        <span><a href="#"><AiFillLinkedin/></a></span>
+        <span><a href="#"><BsFacebook/></a></span>
+        <span><a href="#"><BsSlack/></a></span>
+        </Zoom></Icons>
+
+        <Fade>
         <ArrowUp
         onClick={scrollUp}><AiOutlineArrowUp/></ArrowUp>
+        </Fade>
       </Profile>
         
       <Form>
-        <Forms>
-          <Name>
-            <span><CgProfile/></span>
-            <input type="text" placeholder='Fullname...'/>
-          </Name>
-          <Name>
-            <span><MdAlternateEmail/></span>
-            <input type="email" placeholder='Email...'/>
-          </Name>
-          <Name>
-            <span className='messageIcon'><FiMail/></span>
-            <textarea cols="30" rows="10" placeholder='Message...'/>
-          </Name>
-          <Button>Submit</Button>
-        </Forms>        
+      <Slide direction="right">
+          <Forms>
+            <Name>
+              <span><CgProfile/></span>
+              <input type="text" placeholder='Fullname...'/>
+            </Name>
+            <Name>
+              <span><MdAlternateEmail/></span>
+              <input type="email" placeholder='Email...'/>
+            </Name>
+            <Name>
+              <span className='messageIcon'><FiMail/></span>
+              <textarea cols="30" rows="10" placeholder='Message...'/>
+            </Name>
+            <Button>Submit</Button>
+          </Forms>   
+        </Slide>     
       </Form>
     </Container>
   )

@@ -4,6 +4,7 @@ import ColorContainer from '../../common/ColorContainer'
 import { RowContainer } from '../../common/commonStyle'
 import Slider from './SliderComp'
 import SliderComp from './SliderComp'
+import { Zoom } from 'react-awesome-reveal'
 
 
 const Container = styled.div`
@@ -37,6 +38,7 @@ const Projects = () => {
   return (
     <Container id='project'>
       <Recent>
+      <Zoom>
         <RowContainer style={{ justifyContent: 'center', alignItems: 'center' }}>
           <h1>Recent</h1>
           <ColorContainer content={'Projects'} size={'1.9rem'} />
@@ -44,6 +46,7 @@ const Projects = () => {
         <Paragraph>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown prin
         </Paragraph>
+      </Zoom>
         <Slide>
           <SliderComp />
         </Slide>
