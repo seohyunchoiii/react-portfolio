@@ -35,7 +35,7 @@ const Slide = styled.div``
 
 const Projects = () => {
   return (
-    <Container>
+    <Container id='project'>
       <Recent>
         <RowContainer style={{ justifyContent: 'center', alignItems: 'center' }}>
           <h1>Recent</h1>

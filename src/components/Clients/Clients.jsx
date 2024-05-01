@@ -159,7 +159,7 @@ const Clients = () => {
     <ClientSlider key={i} item={item} />
   ))
   return (
-    <Container>
+    <Container id='client'>
       <div style={{ color: `${COLORS.mint}`, fontWeight: 700, textTransform: 'uppercase' }}>
         testimonials
       </div>

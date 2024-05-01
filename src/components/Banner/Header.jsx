@@ -96,11 +96,11 @@ const Header = () => {
         Portfolio
       </Logo>
       <Navbar bar={bar}>
-        <Link href="#">Home</Link>
-        <Link href="#">Services</Link>
-        <Link href="#">Projects</Link>
-        <Link href="#">Testimonials</Link>
-        <Link href="#">Portfolio</Link>
+        <Link href="#home">Home</Link>
+        <Link href="#service">Services</Link>
+        <Link href="#project">Projects</Link>
+        <Link href="#client">Testimonials</Link>
+        <Link href="#footer">Portfolio</Link>
       </Navbar>
       <Bars onClick={() => setBar(!bar)}>
         {bar ? <CgClose/> : <FaBars/>}

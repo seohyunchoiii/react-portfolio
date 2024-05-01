@@ -164,6 +164,12 @@ const Button = styled.button`
 `
 
 const Footer = () => {
+    const scrollUp = () => {
+      window.scroll({
+        top: 0,
+        behavior: "smooth"
+      })
+    }
   return (
     <Container>
       <Profile>
@@ -188,7 +194,8 @@ const Footer = () => {
           <span><a href="#"><BsFacebook/></a></span>
           <span><a href="#"><BsSlack/></a></span>
         </Icons>
-        <ArrowUp><AiOutlineArrowUp/></ArrowUp>
+        <ArrowUp
+        onClick={scrollUp}><AiOutlineArrowUp/></ArrowUp>
       </Profile>
         
       <Form>

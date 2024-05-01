@@ -16,7 +16,7 @@ const Profile = styled.div`
 const IMAGE = require('./profile-pic.jpg')
 const ProfComponent = () => {
   return (
-    <Container>
+    <Container id='home'>
       <Texts>
         <Title>Hello I'm</Title>
         <h3>Choi</h3>
