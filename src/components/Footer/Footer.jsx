@@ -21,11 +21,10 @@ const Container = styled.div`
     width: 90%;
   }
   `
-const Profile = styled.div``
-const Form = styled.div``
-const Forms = styled.div``
-const Button = styled.button``
-const Name = styled.div``
+const Profile = styled.div`
+  flex: 1;
+`
+
 const Header = styled.h1``
 const Address = styled.h1`
   padding: 1rem 0;
@@ -103,7 +102,54 @@ const ArrowUp = styled.div`
   font-weight: 700;
   margin-top: 2rem;
 `
+const Form = styled.div`
+  flex: 1;
+  font-size: 1.3rem;
+  padding-bottom: 0.7rem;
+`
 
+const Forms = styled.div`
+  background-color: #191923;
+  padding: 0.8rem;
+  border-radius: 5px;
+`
+
+const Name = styled.div`
+  display: flex;
+  border: 1px solid gray;
+  margin-bottom: 0.5rem;
+  input, textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: transparent;
+    padding: 1rem 0.5rem;
+  }
+  span{
+    background-color: #3e3e3e;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .messageIcon{
+    align-items: flex-start;
+    padding-top: 0.5rem;
+  }
+`
+const Button = styled.button`
+  width: 5rem;
+  height: 1.8rem;
+  background-color: ${COLORS.mint};
+  border: none;
+  border-radius: 5px;
+  filter: drop-shadow(0px 4px 5px #01be9551);
+  cursor: pointer;
+  &:hover{
+    filter: drop-shadow(0px 6px 9px #01be9551);
+  }
+`
 
 const Footer = () => {
   return (
@@ -136,15 +182,15 @@ const Footer = () => {
       <Form>
         <Forms>
           <Name>
-            <CgProfile/>
+            <span><CgProfile/></span>
             <input type="text" placeholder='Fullname...'/>
           </Name>
           <Name>
-            <MdAlternateEmail/>
+            <span><MdAlternateEmail/></span>
             <input type="email" placeholder='Email...'/>
           </Name>
           <Name>
-            <FiMail/>
+            <span className='messageIcon'><FiMail/></span>
             <textarea cols="30" rows="10" placeholder='Message...'/>
           </Name>
           <Button>Submit</Button>
