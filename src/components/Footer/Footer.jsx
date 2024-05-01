@@ -173,7 +173,7 @@ const Footer = () => {
     }
   return (
     <Container>
-      <Profile>
+      <Profile id="footer">
         <Slide direction="left" delay={1}><Header>Portfolio</Header></Slide>
         <Slide direction="left"><Address>Address
         <Paragraph>20, Gangneung-daero 194beon-gil, Gangneung-si,
